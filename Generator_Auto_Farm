@@ -1,6 +1,4 @@
 -- Made by RoKanchik_YT
-while true do
-wait(60)
 while not game:IsLoaded() do
     wait()
 end
@@ -274,4 +272,3 @@ if isInGame then
 end
 wait(0.1)
 end
-end)
