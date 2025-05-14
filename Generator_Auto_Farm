@@ -231,7 +231,7 @@ local function SendWebhook(Title, Description, Color, ProfilePicture, Footer)
 			Method = "POST",
 			Headers = { ["Content-Type"] = "application/json" },
 			Body = game:GetService("HttpService"):JSONEncode({
-				username = Generator AutoFarm - game:GetService("Players").LocalPlayer.Username,
+				username = game:GetService("Players").LocalPlayer.Username,
 				avatar_url = ProfilePicture,
 				embeds = {
 					{
