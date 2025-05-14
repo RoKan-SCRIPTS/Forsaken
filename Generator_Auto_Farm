@@ -21,7 +21,7 @@ local GenTime = tonumber(getgenv and getgenv().GeneratorTime) or 2.5
 -- if queueteleport then
 -- 	queueteleport([[
 --         if getgenv then getgenv().DiscordWebhook = "]] .. tostring(DCWebhook) .. [[" end
---         loadstring(game:HttpGet('https://raw.githubusercontent.com/ivannetta/ShitScripts/main/PathfindGens.lua'))()
+--         loadstring(game:HttpGet('https://raw.githubusercontent.com/RoKan-SCRIPTS/Forsaken/refs/heads/main/Generator_Auto_Farm'))()
 --     ]])
 -- end
 
@@ -188,7 +188,7 @@ task.spawn(function()
 	end
 end)
 
-MakeNotif("Generator Auto Farm - @RoKan_SCRIPTS", "It Loaded!", 5, Color3.fromRGB(115, 194, 89))
+MakeNotif("Generator Auto Farm", "It Loaded!", 5, Color3.fromRGB(115, 194, 89))
 
 local function GetProfilePicture()
 	local PlayerID = game:GetService("Players").LocalPlayer.UserId
@@ -229,7 +229,7 @@ local function SendWebhook(Title, Description, Color, ProfilePicture, Footer)
 			Method = "POST",
 			Headers = { ["Content-Type"] = "application/json" },
 			Body = game:GetService("HttpService"):JSONEncode({
-				username = game:GetService("Players").LocalPlayer.DisplayName,
+				username = game:GetService("Players").LocalPlayer.Username,
 				avatar_url = ProfilePicture,
 				embeds = {
 					{
@@ -610,8 +610,8 @@ local function DidiDie()
 		if Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
 			if Players.LocalPlayer.Character.Humanoid.Health == 0 then
 				SendWebhook(
-					"Generator Autofarm",
-					"THIS STUPID KILLER KILLED ME IM SO ANGRY OMG \nCurrent Balance: "
+					"Generator AutoFarm",
+					"You Died  \nCurrent Balance: "
 						.. game:GetService("Players").LocalPlayer.PlayerData.Stats.Currency.Money.Value
 						.. "\nTime Played: "
 						.. (function()
@@ -627,7 +627,7 @@ local function DidiDie()
 						end)(),
 					0xFF0000,
 					ProfilePicture,
-					".gg/fartsaken | <3"
+					"Telegram: @RoKan_SCRIPTS"
 				)
 				task.wait(0.5)
 				teleportToRandomServer()
