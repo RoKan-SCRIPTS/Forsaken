@@ -246,7 +246,7 @@ local function SendWebhook(Title, Description, Color, ProfilePicture, Footer)
 		end
 	end)
 
-	MakeNotif("PathfindGens", "Sent webhook: " .. Title .. "\n" .. Description, 5, Color3.fromRGB(115, 194, 89))
+	MakeNotif("Generator Auto Farm", "Sent webhook: " .. Title .. "\n" .. Description, 5, Color3.fromRGB(115, 194, 89))
 	if not success then
 		print("Error: " .. errorMessage)
 	end
