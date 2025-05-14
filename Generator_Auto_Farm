@@ -575,7 +575,7 @@ local function DoAllGenerators()
 		end
 	end
 	SendWebhook(
-		"Generator Autofarm thing",
+		"Generator AutoFarm ✅",
 		"Finished all generators, Current Balance: "
 			.. game:GetService("Players").LocalPlayer.PlayerData.Stats.Currency.Money.Value
 			.. "\nTime Played: "
@@ -591,7 +591,7 @@ local function DoAllGenerators()
 			end)(),
 		0x00FF00,
 		ProfilePicture,
-		".gg/fartsaken | <3"
+		"@RoKan_SCRIPTS | <3"
 	)
 	task.wait(1)
 	teleportToRandomServer()
@@ -612,8 +612,8 @@ local function DidiDie()
 		if Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
 			if Players.LocalPlayer.Character.Humanoid.Health == 0 then
 				SendWebhook(
-					"Generator Autofarm",
-					"THIS STUPID KILLER KILLED ME IM SO ANGRY OMG \nCurrent Balance: "
+					"Generator Autofarm ❌",
+					"You Died \nCurrent Balance: "
 						.. game:GetService("Players").LocalPlayer.PlayerData.Stats.Currency.Money.Value
 						.. "\nTime Played: "
 						.. (function()
@@ -629,7 +629,7 @@ local function DidiDie()
 						end)(),
 					0xFF0000,
 					ProfilePicture,
-					".gg/fartsaken | <3"
+					"@RoKan_SCRIPTS | <3"
 				)
 				task.wait(0.5)
 				teleportToRandomServer()
