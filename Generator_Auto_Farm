@@ -1,6 +1,6 @@
 --Made by RoKanchik_YT
 print("Generator AutoFarm - Loaded!")
-print("Telegram: RoKan_SCRIPTS")
+print("Telegram: @RoKan_SCRIPTS")
 if getgenv and tonumber(getgenv().LoadTime) then
 	task.wait(tonumber(getgenv().LoadTime))
 else
