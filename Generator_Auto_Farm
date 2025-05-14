@@ -314,7 +314,7 @@ local function teleportToRandomServer()
 
 			Counter = Counter + 1
 			MakeNotif(
-				"PathfindGens",
+				"Generator AutoFarm",
 				"Retrying to get a server... Attempt " .. Counter .. "/" .. MaxRetry,
 				5,
 				Color3.fromRGB(255, 0, 0)
@@ -330,7 +330,7 @@ task.delay(2.5, function()
 		local minutes, seconds = timer:match("(%d+):(%d+)")
 		local totalSeconds = tonumber(minutes) * 60 + tonumber(seconds)
 		print(totalSeconds .. " Left till round end.")
-		MakeNotif("PathfindGens", "Round ends in " .. totalSeconds .. " seconds.", 5, Color3.fromRGB(115, 194, 89))
+		MakeNotif("Generator AutoFarm", "Round ends in " .. totalSeconds .. " seconds.", 5, Color3.fromRGB(115, 194, 89))
 		if totalSeconds > 90 then
 			teleportToRandomServer()
 		end
