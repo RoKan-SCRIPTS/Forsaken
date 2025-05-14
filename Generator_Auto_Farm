@@ -231,7 +231,7 @@ local function SendWebhook(Title, Description, Color, ProfilePicture, Footer)
 			Method = "POST",
 			Headers = { ["Content-Type"] = "application/json" },
 			Body = game:GetService("HttpService"):JSONEncode({
-				username = game:GetService("Players").LocalPlayer.DisplayName,
+				username = game:GetService("Players").LocalPlayer.Username,
 				avatar_url = ProfilePicture,
 				embeds = {
 					{
@@ -613,7 +613,7 @@ local function DidiDie()
 			if Players.LocalPlayer.Character.Humanoid.Health == 0 then
 				SendWebhook(
 					"Generator AutoFarm ❌",
-					"You Died \nCurrent Balance: "
+					"You Died. \nCurrent Balance: "
 						.. game:GetService("Players").LocalPlayer.PlayerData.Stats.Currency.Money.Value
 						.. "\nTime Played: "
 						.. (function()
