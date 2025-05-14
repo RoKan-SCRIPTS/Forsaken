@@ -613,7 +613,7 @@ local function DidiDie()
 			if Players.LocalPlayer.Character.Humanoid.Health == 0 then
 				SendWebhook(
 					"Generator AutoFarm ❌",
-					"You Died. \nCurrent Balance: "
+					"You Died \nCurrent Balance: "
 						.. game:GetService("Players").LocalPlayer.PlayerData.Stats.Currency.Money.Value
 						.. "\nTime Played: "
 						.. (function()
