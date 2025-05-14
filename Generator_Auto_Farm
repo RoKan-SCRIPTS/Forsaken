@@ -573,8 +573,8 @@ local function DoAllGenerators()
 		end
 	end
 	SendWebhook(
-		"Generator Autofarm thing",
-		"Finished all generators, Current Balance: "
+		"Generator AutoFarm",
+		"Finished All Generators, Current Balance: "
 			.. game:GetService("Players").LocalPlayer.PlayerData.Stats.Currency.Money.Value
 			.. "\nTime Played: "
 			.. (function()
@@ -589,7 +589,7 @@ local function DoAllGenerators()
 			end)(),
 		0x00FF00,
 		ProfilePicture,
-		".gg/fartsaken | <3"
+		"Telegram: @RoKan_SCRIPTS"
 	)
 	task.wait(1)
 	teleportToRandomServer()
